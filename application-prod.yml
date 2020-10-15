@@ -1,0 +1,20 @@
+env.name: PRODUCTION
+app.name: spring-boot-configuration ${env.name}
+
+list:
+  values: PROD, IS, CLEAN
+
+map:
+  values: "{key: 'QA_ENV', value: 'Profile Testing'}"
+
+db:
+  connection: http://PRODUCTION:8081
+  username: userproduction
+  password: passwordproduction
+  port: 80000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

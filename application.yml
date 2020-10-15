@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+env.name: QA
+app.name: spring-boot-configuration ${env.name}
+
+list:
+    values: One, Two, Three
+
+map:
+   values: "{key: 'QA_ENV', value: 'Profile Testing'}"
+
+db:
+  connection: http://locahost:8081
+  username: userqa
+  password: passwordqa
+  port: 9000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+spring:
+  profiles:
+    active: prod
